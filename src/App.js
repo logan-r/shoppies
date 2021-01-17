@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import { Sidebar } from './components/Sidebar/Sidebar';
 
 function App() {
   return (
@@ -7,10 +7,7 @@ function App() {
       <div className="Content">
         <h1>Your Shoppies Nominations</h1>
       </div>
-      <div className="Sidebar">
-        <h2>Add a nomination</h2>
-        <input className="SearchBar" placeholder="Search by movie title" />
-      </div>
+      <Sidebar/>
     </div>
   );
 }

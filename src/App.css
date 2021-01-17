@@ -4,7 +4,7 @@
   min-height: 100vh;
 }
 
-h1, h2 {
+h1 {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 24px;
@@ -13,11 +13,5 @@ h1, h2 {
 
 .Content {
   flex: 1;
-  padding: 40px;
-}
-
-.Sidebar {
-  width: 36%;
-  background: var(--color-black10);
   padding: 40px;
 }
