@@ -55,14 +55,16 @@ export default function SearchPanel() {
           autoFocus={true}
         />
       </div>
-      {
-        loading ? 'Loading...' :
-        searchQuery === '' ? 'Search to see movies' :
-        noResults ? 'Type more to search' : 
-        <div className="SearchPanel-movie-grid">
-          {searchResults.map(movie => <MovieCard {...movie} key={movie.imdbID} />)}
-        </div>
-      }
+      <div className="SearchPanel-content">
+        {
+          loading ? 'Loading...' :
+          searchQuery === '' ? 'Nominate movies by searching' :
+          noResults ? 'Type more to search' : 
+          <div className="SearchPanel-movie-grid">
+            {searchResults.map(movie => <MovieCard {...movie} key={movie.imdbID} />)}
+          </div>
+        }
+      </div>
     </div>
   )
 }

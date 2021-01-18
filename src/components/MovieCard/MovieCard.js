@@ -11,9 +11,11 @@ import './MovieCard.css';
 export default function MovieCard(props) {
   return (
     <div className="MovieCard">
-      <img src={props.Poster} alt={`Poster for ${props.Title}`} className="poster" />
-      <h3>{props.Title}</h3>
-      <div className="year">{props.Year}</div>
+      <img src={props.Poster} alt={`Poster for ${props.Title}`} className="MovieCard-poster" />
+      <div className="MovieCard-text">
+        <h3>{props.Title}</h3>
+        <div className="MovieCard-year">{props.Year}</div>
+      </div>
     </div>
   )
 }

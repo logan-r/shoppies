@@ -29,10 +29,20 @@
   background: white;
   border-radius: 24px;
   height: 44px;
-  margin: 0 30px;
+  margin-left: 30px;
+}
+
+.SearchPanel-content {
+  text-align: center;
+  color: var(--color-black60);
+  padding-bottom: 40px;
+  font-size: 18px;
 }
 
 .SearchPanel-movie-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, 160px);
+  column-gap: 30px;
+  row-gap: 30px;
+  justify-content: center;
 }
