@@ -27,3 +27,11 @@
 .Nominations-remove:hover {
   color: var(--color-highlight);
 }
+
+.Nominations-banner {
+  background-color: var(--color-blue);
+  color: white;
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 8px;
+}

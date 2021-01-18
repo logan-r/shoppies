@@ -18,6 +18,13 @@ export default function Nominations(props) {
           }
         </ol>
       }
+
+      {
+        props.nominations.length === 5 &&
+        <div className="Nominations-banner">
+          You've selected your 5 movies
+        </div>
+      }
     </div>
   )
 }
