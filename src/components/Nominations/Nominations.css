@@ -1,0 +1,17 @@
+.Nominations {
+  flex: 1;
+  padding: 40px;
+  max-width: 300px;
+}
+
+.Nominations h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0;
+}
+
+.Nominations-empty {
+  margin-top: 16px;
+  color: var(--color-black60);
+}

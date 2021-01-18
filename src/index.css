@@ -13,6 +13,8 @@ body {
   --color-black20: #dddddd;
   --color-black60: #6f6f6f;
   --color-black80: #444444;
+  --color-blue: #2179de;
+  --color-highlight: #e09109;
 
   --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -20,6 +22,8 @@ body {
   --font-heading: 'Hind', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  
+  overflow-x: hidden;
 }
 
 code {

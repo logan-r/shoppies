@@ -3,16 +3,3 @@
   width: 100vw;
   min-height: 100vh;
 }
-
-h1 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 24px;
-  margin: 0;
-}
-
-.Content {
-  flex: 1;
-  padding: 40px;
-  max-width: 300px;
-}

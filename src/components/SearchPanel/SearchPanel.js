@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import MovieCard from '../MovieCard/MovieCard';
 import './SearchPanel.css';
 
-export default function SearchPanel() {
+export default function SearchPanel(props) {
   // Keep track of what the user has entered in search bar
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -61,7 +61,14 @@ export default function SearchPanel() {
           searchQuery === '' ? 'Nominate movies by searching' :
           noResults ? 'Type more to search' : 
           <div className="SearchPanel-movie-grid">
-            {searchResults.map(movie => <MovieCard {...movie} key={movie.imdbID} />)}
+            {searchResults.map(movie =>
+              <MovieCard
+                {...movie}
+                key={movie.imdbID}
+                isNominated={props.nominations.includes(movie)}
+                onSelect={() => props.addToNominations(movie)}
+              />
+            )}
           </div>
         }
       </div>
