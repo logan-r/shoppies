@@ -10,8 +10,9 @@ export default function Nominations(props) {
         <ol>
           {
             props.nominations.map(movie =>
-              <li>
+              <li key={movie.imdbID}>
                 {movie.Title} ({movie.Year})
+                <span className="Nominations-remove" onClick={() => props.removeFromNominations(movie)}>remove</span>
               </li>
             )
           }

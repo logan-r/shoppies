@@ -66,7 +66,11 @@ export default function SearchPanel(props) {
                 {...movie}
                 key={movie.imdbID}
                 isNominated={props.nominations.includes(movie)}
-                onSelect={() => props.addToNominations(movie)}
+                onSelect={
+                  props.nominations.includes(movie) ?
+                  () => props.removeFromNominations(movie) :
+                  () => props.addToNominations(movie)
+                }
               />
             )}
           </div>

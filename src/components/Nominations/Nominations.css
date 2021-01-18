@@ -15,3 +15,15 @@
   margin-top: 16px;
   color: var(--color-black60);
 }
+
+.Nominations-remove {
+  padding-left: 10px;
+  font-size: 14px;
+  color: var(--color-black60);
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.Nominations-remove:hover {
+  color: var(--color-highlight);
+}
