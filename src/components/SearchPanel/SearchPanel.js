@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import './Sidebar.css';
+import MovieCard from '../MovieCard/MovieCard';
+import './SearchPanel.css';
 
-export function Sidebar() {
+export default function SearchPanel() {
   // Keep track of what the user has entered in search bar
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -25,17 +26,16 @@ export function Sidebar() {
         const result = await fetch(`http://www.omdbapi.com/?s=${encodeURIComponent(searchQuery)}&type=movie&apikey=23afe4e0`);
         const data = await result.json();
 
-        // Done loading
-        setLoading(false);
-
         // Make sure there was a response
-        if (data.response === 'False') {
+        if (data.Response === 'False') {
           setNoResults(true);
         } else {
           setNoResults(false);
+          setSearchResults(data.Search);
         }
 
-        setSearchResults(data.Search);
+        // Done loading
+        setLoading(false);
       } catch(e) {
         console.log(e);
         alert('Error fetching movies from API');
@@ -44,19 +44,24 @@ export function Sidebar() {
   }, [searchQuery]);
 
   return (
-    <div className="Sidebar">
-      <h2>Add a nomination</h2>
-      <input
-        className="search"
-        value={searchQuery}
-        onChange={e => setSearchQuery(e.target.value)}
-        placeholder="Search by movie title"
-        autoFocus={true}
-      />
+    <div className="SearchPanel">
+      <div className="SearchPanel-heading-bar">
+        <h1>The Shoppies</h1>
+        <input
+          className="search"
+          value={searchQuery}
+          onChange={e => setSearchQuery(e.target.value)}
+          placeholder="Search by movie title"
+          autoFocus={true}
+        />
+      </div>
       {
         loading ? 'Loading...' :
         searchQuery === '' ? 'Search to see movies' :
-        noResults ? 'Type more to search' : JSON.stringify(searchResults)
+        noResults ? 'Type more to search' : 
+        <div className="SearchPanel-movie-grid">
+          {searchResults.map(movie => <MovieCard {...movie} key={movie.imdbID} />)}
+        </div>
       }
     </div>
   )

@@ -1,0 +1,38 @@
+.SearchPanel {
+  flex: 1;
+  padding: 0 40px;
+  background: var(--color-black5);
+}
+
+.SearchPanel h1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0;
+}
+
+.SearchPanel-heading-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.SearchPanel-heading-bar .search {
+  flex: 1;
+  border: none;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  font-size: 16px;
+  outline: none;
+  padding: 8px 30px;
+  background: white;
+  border-radius: 24px;
+  height: 44px;
+  margin: 0 30px;
+}
+
+.SearchPanel-movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

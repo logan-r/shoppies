@@ -1,13 +1,13 @@
 import './App.css';
-import { Sidebar } from './components/Sidebar/Sidebar';
+import SearchPanel from './components/SearchPanel/SearchPanel';
 
 function App() {
   return (
     <div className="App">
+      <SearchPanel />
       <div className="Content">
-        <h1>Your Shoppies Nominations</h1>
+        <h1>Your Nominations</h1>
       </div>
-      <Sidebar/>
     </div>
   );
 }
