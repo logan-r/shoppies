@@ -2,6 +2,8 @@
 
 Entry for the 2021 Shopify Internship Challenge by Logan Ralston
 
+View live demo at http://logan-r.com/shoppies/
+
 ## Available Scripts
 
 In the project directory, you can run:
